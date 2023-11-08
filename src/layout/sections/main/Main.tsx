@@ -9,7 +9,7 @@ export const Main = () => {
       <FlexWrapper align={"center"} justify={"space-around"}>
         <div>
           <span>Hi There</span>
-          <span>I am Svetlana Dyablo</span>
+          <span>I am Daniil Minin</span>
           <MainTitle>A Web Developer</MainTitle>
         </div>
         <Photo src={photo} alt="" />
@@ -29,4 +29,6 @@ const Photo = styled.img`
   object-fit: cover;
 `;
 
-const MainTitle = styled.h1``;
+const MainTitle = styled.h1`
+  color: red;
+`;
