@@ -15,7 +15,7 @@ export const Header = () => {
         <FlexWrapper justify={"space-between"} align={"center"}>
           <Logo />
           <HeaderMenu menuItems={items} />
-          <MobileMenu menuItems={items} />
+          {/* <MobileMenu menuItems={items} /> */}
         </FlexWrapper>
       </Container>
     </StyledHeader>
