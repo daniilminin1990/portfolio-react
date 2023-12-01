@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const SectionTitle = styled.h2`
+  ${font({ family: "Josefin Sans, sans-serif", weight: 600, Fmax: 36, Fmin: 30 })}
+  /* font-family: Josefin Sans, sans-serif;
+  font-weight: 600;
+  font-size: 36px; */
+
   text-align: center;
   letter-spacing: 5px;
-  font-family: Josefin Sans, sans-serif;
-  font-weight: 600;
-  font-size: 36px;
   margin-bottom: 90px;
 
   position: relative;
@@ -21,5 +24,9 @@ export const SectionTitle = styled.h2`
     left: 50%;
     transform: translateX(-50%);
     bottom: -30px;
+
+    @media ${theme.media.mobile} {
+      bottom: -24px;
+    }
   }
 `;
