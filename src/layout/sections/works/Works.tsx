@@ -7,17 +7,34 @@ import socialImage from "../../../assets/images/proj-1.webp";
 import timerImage from "../../../assets/images/proj-2.webp";
 import { Container } from "../../../components/Container";
 import { TabMenu } from "./tabMenu/TabMenu";
+import { S } from "./Works_Styles";
 
 const worksItems = ["All", "Landing page", "React", "Spa"];
 
-export const Works = () => {
+const workData = [
+  {
+    title: "Social Network",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    src: socialImage,
+  },
+  {
+    title: "Timer",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    src: timerImage,
+  },
+];
+
+export const Works: React.FC = () => {
   return (
-    <StyledWorks>
+    <S.Works>
       <Container>
         <SectionTitle>My Works</SectionTitle>
         <TabMenu menuItems={worksItems} />
         <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
-          <Work
+          {workData.map((w, index) => {
+            return <Work title={w.title} key={index} text={w.text} src={w.src} />;
+          })}
+          {/* <Work
             title={"Social Network"}
             text={
               "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
@@ -30,15 +47,9 @@ export const Works = () => {
               "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim"
             }
             src={timerImage}
-          />
+          /> */}
         </FlexWrapper>
       </Container>
-    </StyledWorks>
+    </S.Works>
   );
 };
-
-const StyledWorks = styled.section`
-  ${FlexWrapper} {
-    gap: 30px;
-  }
-`;
