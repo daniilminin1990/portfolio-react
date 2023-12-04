@@ -27,7 +27,7 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
   width: 380px;
   flex-grow: 1;
-  padding: 62px 20px 40px;
+  padding: 46px 20px 55px;
 
   @media ${theme.media.mobile} {
     padding: 62px 0px 40px;
@@ -53,7 +53,7 @@ export const IconWrapper = styled.div`
 `;
 
 const SkillTitle = styled.h3`
-  margin: 70px 15px;
+  margin: 65px 15px 15px;
   text-transform: uppercase;
 `;
 const SkillText = styled.p`
