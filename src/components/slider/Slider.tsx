@@ -1,24 +1,85 @@
 import React from "react";
-import { FlexWrapper } from "../FlexWrapper";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import "../../styles/slider.css";
 import { S } from "./Slider_Styles";
+import { Icon } from "../icon/Icon";
 
-export const Slider: React.FC = () => {
+// const responsive = {
+//   0: { items: 1 },
+//   568: { items: 2 },
+//   1024: { items: 3 },
+// };
+
+type SlidePropsType = {
+  text: string;
+  userName: string;
+};
+
+const Slide = (props: SlidePropsType) => {
   return (
-    <S.Slider>
-      <FlexWrapper>
-        <S.Slide>
-          <S.Text>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </S.Text>
-          <S.Name>@Daniil Minin</S.Name>
-        </S.Slide>
-      </FlexWrapper>
-      <S.Pagination>
-        <span> </span>
-        <span className={"active"}> </span>
-        <span> </span>
-      </S.Pagination>
-    </S.Slider>
+    <S.Slide>
+      <S.Text>{props.text}</S.Text>
+      <S.Name>@{props.userName}</S.Name>
+    </S.Slide>
   );
 };
+
+const items = [
+  <Slide
+    userName={"Ivan Ivanov"}
+    text={
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    }
+  />,
+  <Slide
+    userName={"Petr Petrov"}
+    text={
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    }
+  />,
+  <Slide
+    userName={"Igor Igorev"}
+    text={
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    }
+  />,
+];
+
+// prettier-ignore
+export const Slider = () => (
+  <S.Slider>
+    <AliceCarousel 
+      mouseTracking /* листать с пом мыши */ 
+      items={items} 
+      renderPrevButton = {()=>{
+        return <Icon iconId={"code"} />
+      }}
+    />
+  </S.Slider>
+);
+
+// import React from "react";
+// import { FlexWrapper } from "../FlexWrapper";
+// import { S } from "./Slider_Styles";
+
+// export const Slider: React.FC = () => {
+//   return (
+//     <S.Slider>
+//       <FlexWrapper>
+//         <S.Slide>
+//           <S.Text>
+//             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+//             aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+//           </S.Text>
+//           <S.Name>@Daniil Minin</S.Name>
+//         </S.Slide>
+//       </FlexWrapper>
+//       <S.Pagination>
+//         <span> </span>
+//         <span className={"active"}> </span>
+//         <span> </span>
+//       </S.Pagination>
+//     </S.Slider>
+//   );
+// };
