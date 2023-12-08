@@ -14,6 +14,7 @@ export const Button = styled.button`
     &::before {
       height: 100%;
       width: 100%;
+      border-radius: 5px;
     }
   }
 
@@ -29,6 +30,6 @@ export const Button = styled.button`
     left: 50%;
     z-index: -1;
     transform: translateX(-50%);
-    transition: 0.2s;
+    transition: ${theme.animations.transition};
   }
 `;

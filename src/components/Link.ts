@@ -22,17 +22,17 @@ export const Link = styled.a<{ active?: boolean }>`
     background-color: ${theme.colors.accent};
 
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     bottom: 5px;
+    left: 3px;
+    right: 3px;
     z-index: -1;
-
-    /* Значит если в props придет active, который = true и тип его boolean, то примени вот это*/
+    height: 0;
+    transition: ${theme.animations.transition};
     ${(props) =>
       props.active === true &&
       css<{ active?: boolean }>`
         height: 10px;
-      `}
+      `};
+    /* Значит если в props придет active, который = true и тип его boolean, то примени вот это */
   }
 `;

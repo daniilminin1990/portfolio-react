@@ -24,7 +24,7 @@ const PhotoWrapper = styled.div`
     z-index: -1;
 
     @media ${theme.media.mobile} {
-      width: 314px;
+      width: 308px;
       height: 414px;
       top: -17px;
       left: 20px;
