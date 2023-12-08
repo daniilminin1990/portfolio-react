@@ -6,9 +6,9 @@ import { S } from "./Contacts_Styles";
 
 export const Contacts: React.FC = () => {
   return (
-    <S.Contacts>
+    <S.Contacts id={"contacts"}>
       <Container>
-        <SectionTitle>Contact</SectionTitle>
+        <SectionTitle>Contacts</SectionTitle>
         <S.Form>
           <S.Field placeholder={"Name"} />
           <S.Field placeholder={"Subject"} />
