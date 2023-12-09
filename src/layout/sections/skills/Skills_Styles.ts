@@ -11,6 +11,7 @@ const Skill = styled.div`
   padding: 46px 20px 55px;
 
   @media ${theme.media.mobile} {
+    width: auto;
     padding: 62px 0px 40px;
   }
 `;
