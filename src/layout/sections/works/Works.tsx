@@ -7,6 +7,7 @@ import timerImage from "../../../assets/images/proj-2.webp";
 import { Container } from "../../../components/Container";
 import { TabMenu, TabsStatusType } from "./tabMenu/TabMenu";
 import { S } from "./Works_Styles";
+import { motion, AnimatePresence } from "framer-motion";
 
 // const tabsItems = ["All", "Landing page", "React", "Spa"];
 const tabsItems: Array<{ title: string; status: TabsStatusType }> = [
@@ -34,12 +35,42 @@ const worksData = [
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     src: socialImage,
     type: "Spa",
+    id: 1,
   },
   {
     title: "Timer",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     src: timerImage,
     type: "React",
+    id: 2,
+  },
+  {
+    title: "Social Network",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    src: socialImage,
+    type: "Spa",
+    id: 3,
+  },
+  {
+    title: "Timer",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    src: timerImage,
+    type: "React",
+    id: 4,
+  },
+  {
+    title: "Social Network",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    src: socialImage,
+    type: "Spa",
+    id: 5,
+  },
+  {
+    title: "Timer",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    src: timerImage,
+    type: "React",
+    id: 6,
   },
 ];
 
@@ -67,9 +98,22 @@ export const Works: React.FC = () => {
         <SectionTitle>My Works</SectionTitle>
         <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus} />
         <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
-          {filteredWorks.map((w, index) => {
-            return <Work title={w.title} key={index} text={w.text} src={w.src} />;
-          })}
+          <AnimatePresence>
+            {filteredWorks.map((w, index) => {
+              return (
+                // prettier-ignore
+                <motion.div style={{width:"400px", flexGrow: 1, maxWidth: "540px"}}
+                  layout
+                  initial={{ opacity: 0 }} 
+                  animate={{ opacity: 1 }} 
+                  exit={{ opacity: 0 }}
+                  key={w.id}
+                >
+                  <Work title={w.title} key={w.id} text={w.text} src={w.src} />
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </FlexWrapper>
       </Container>
     </S.Works>
