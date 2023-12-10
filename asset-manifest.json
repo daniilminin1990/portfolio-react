@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/daniilminin1990/portfolio-react/static/css/main.f5b4e6f1.css",
-    "main.js": "/daniilminin1990/portfolio-react/static/js/main.fd76c6cc.js",
-    "static/js/787.25eaef86.chunk.js": "/daniilminin1990/portfolio-react/static/js/787.25eaef86.chunk.js",
-    "static/media/profile-photo_1.webp": "/daniilminin1990/portfolio-react/static/media/profile-photo_1.87569db7b960a2a0a067.webp",
-    "static/media/proj-1.webp": "/daniilminin1990/portfolio-react/static/media/proj-1.f4264469c0e20ce5f20d.webp",
-    "static/media/proj-2.webp": "/daniilminin1990/portfolio-react/static/media/proj-2.e294a9180f3031d1b313.webp",
-    "static/media/icons-sprite.svg": "/daniilminin1990/portfolio-react/static/media/icons-sprite.83563c6467371b2c5ec4e2502c0294c2.svg",
-    "index.html": "/daniilminin1990/portfolio-react/index.html",
-    "main.f5b4e6f1.css.map": "/daniilminin1990/portfolio-react/static/css/main.f5b4e6f1.css.map",
-    "main.fd76c6cc.js.map": "/daniilminin1990/portfolio-react/static/js/main.fd76c6cc.js.map",
-    "787.25eaef86.chunk.js.map": "/daniilminin1990/portfolio-react/static/js/787.25eaef86.chunk.js.map"
+    "main.css": "/portfolio-react/static/css/main.f5b4e6f1.css",
+    "main.js": "/portfolio-react/static/js/main.ffe4ae2d.js",
+    "static/js/787.25eaef86.chunk.js": "/portfolio-react/static/js/787.25eaef86.chunk.js",
+    "static/media/profile-photo_1.webp": "/portfolio-react/static/media/profile-photo_1.87569db7b960a2a0a067.webp",
+    "static/media/proj-1.webp": "/portfolio-react/static/media/proj-1.f4264469c0e20ce5f20d.webp",
+    "static/media/proj-2.webp": "/portfolio-react/static/media/proj-2.e294a9180f3031d1b313.webp",
+    "static/media/icons-sprite.svg": "/portfolio-react/static/media/icons-sprite.83563c6467371b2c5ec4e2502c0294c2.svg",
+    "index.html": "/portfolio-react/index.html",
+    "main.f5b4e6f1.css.map": "/portfolio-react/static/css/main.f5b4e6f1.css.map",
+    "main.ffe4ae2d.js.map": "/portfolio-react/static/js/main.ffe4ae2d.js.map",
+    "787.25eaef86.chunk.js.map": "/portfolio-react/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f5b4e6f1.css",
-    "static/js/main.fd76c6cc.js"
+    "static/js/main.ffe4ae2d.js"
   ]
 }
