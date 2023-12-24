@@ -3,7 +3,6 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/Theme";
 import { Button } from "../../../components/Button";
 import { Link } from "../../../components/Link";
-import { motion } from "framer-motion";
 
 // Works
 const Works = styled.section`
@@ -11,7 +10,7 @@ const Works = styled.section`
   ${FlexWrapper} {
     gap: 30px;
   }
-`;
+  `;
 
 // Work
 // const Work = styled(motion.div)`
@@ -21,6 +20,7 @@ const Work = styled.div`
   flex-grow: 1; */
   ${Link} {
     padding: 10px 0;
+    /* margin-bottom: 10px; */
 
     & + ${Link} {
       margin-left: 20px;
@@ -91,7 +91,7 @@ const Image = styled.img`
 const Title = styled.h3``;
 
 const Description = styled.div`
-  padding: 25px 20px 0;
+  padding: 25px 20px 15px;
   margin-bottom: 25px;
 `;
 
